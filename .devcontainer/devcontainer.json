@@ -13,12 +13,10 @@
         "gurumukhi.selected-lines-count",
         "bradzacher.vscode-copy-filename",
         "PKief.material-icon-theme",
-        "SonarSource.sonarlint-vscode"
+        "SonarSource.sonarlint-vscode",
+        "ms-vscode.live-server"
       ],
       "settings": {
-        "C_Cpp.autocompleteAddParentheses": true,
-        "C_Cpp.codeAnalysis.clangTidy.enabled": true,
-        "C_Cpp.intelliSenseEngine": "default",
         "editor.bracketPairColorization.enabled": true,
         "editor.comments.insertSpace": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode",
