@@ -14,7 +14,8 @@
         "bradzacher.vscode-copy-filename",
         "PKief.material-icon-theme",
         "SonarSource.sonarlint-vscode",
-        "ms-vscode.live-server"
+        "ms-vscode.live-server",
+        "mads-hartmann.bash-ide-vscode"
       ],
       "settings": {
         "editor.bracketPairColorization.enabled": true,
