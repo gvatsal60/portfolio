@@ -54,7 +54,7 @@
   },
   "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:latest",
   "mounts": [
-    "source=${localWorkspaceFolder}/snippets,target=${containerWorkspaceFolder}/.vscode,type=bind,consistency=cached,readonly"
+    "source=${containerWorkspaceFolder}/snippets,target=${containerWorkspaceFolder}/.vscode,type=bind,consistency=cached,readonly"
   ],
   "postCreateCommand": "chmod +x ${containerWorkspaceFolder}/.devcontainer/postCreateScript.sh && ${containerWorkspaceFolder}/.devcontainer/postCreateScript.sh",
   "runArgs": [
