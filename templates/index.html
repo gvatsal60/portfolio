@@ -134,18 +134,28 @@
 
           <section class="about-text">
             <p>
-              I'm Creative Director and UI/UX Designer from Sydney, Australia,
-              working in web development and print media. I enjoy turning
-              complex problems into simple, beautiful and intuitive designs.
+              I'm a passionate software engineer with a diverse technical
+              toolkit, specializing in languages like C/C++, Python, Rust, Shell
+              Scripting, and Perl. My journey in the tech world fuses advanced
+              software development with high-level automation, where every line
+              of code is driven by clarity and efficiency.
             </p>
 
             <p>
-              My job is to build your website so that it is functional and
-              user-friendly but at the same time attractive. Moreover, I add
-              personal touch to your product and make sure that is eye-catching
-              and easy to use. My aim is to bring across your message and
-              identity in the most creative way. I created web design for many
-              famous brand companies.
+              I thrive on transforming complex challenges into streamlined,
+              scalable solutions. By integrating robust agile DevOps practices,
+              I ensure that every project is not only engineered for performance
+              but is also optimized for smooth, continuous delivery.
+            </p>
+
+            <p>
+              I believe software is not just about solving today's problems—it's
+              about anticipating tomorrow's innovations. I bring a personal
+              touch to every project, merging disciplined engineering with
+              creative problem-solving to build systems that empower users and
+              businesses. Let's explore the future of technology together and
+              build solutions that make our digital world more intuitive,
+              efficient, and enjoyable.
             </p>
           </section>
 
@@ -167,11 +177,11 @@
                 </div>
 
                 <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Web Design</h4>
+                  <h4 class="h4 service-item-title">System Design</h4>
 
                   <p class="service-item-text">
-                    The most modern and high-quality design made at a
-                    professional level.
+                    Advanced, scalable, and robust architecture designed to
+                    optimize performance and drive innovation.
                   </p>
                 </div>
               </li>
@@ -180,16 +190,17 @@
                 <div class="service-icon-box">
                   <img
                     src="{{ url_for('static', filename='images/icon-dev.svg') }}"
-                    alt="Web development icon"
+                    alt="development icon"
                     width="40"
                   />
                 </div>
 
                 <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Web Development</h4>
+                  <h4 class="h4 service-item-title">Software Development</h4>
 
                   <p class="service-item-text">
-                    High-quality development of sites at the professional level.
+                    High-quality development of software solutions at the
+                    professional level.
                   </p>
                 </div>
               </li>
@@ -198,17 +209,17 @@
                 <div class="service-icon-box">
                   <img
                     src="{{ url_for('static', filename='images/icon-app.svg') }}"
-                    alt="mobile app icon"
+                    alt="mobile icon"
                     width="40"
                   />
                 </div>
 
                 <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Mobile Apps</h4>
+                  <h4 class="h4 service-item-title">Mobile Experiences</h4>
 
                   <p class="service-item-text">
-                    Professional development of applications for iOS and
-                    Android.
+                    Crafting immersive and intuitive mobile solutions that
+                    seamlessly integrate with your digital lifestyle.
                   </p>
                 </div>
               </li>
@@ -223,11 +234,12 @@
                 </div>
 
                 <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Photography</h4>
+                  <h4 class="h4 service-item-title">Engineering Excellence</h4>
 
                   <p class="service-item-text">
-                    I make high-quality photos of any category at a professional
-                    level.
+                    Like a camera capturing every detail, I turn your vision
+                    into striking software solutions. Each line of code is
+                    crafted with precision and passion.
                   </p>
                 </div>
               </li>
@@ -253,13 +265,14 @@
               </p>
 
               <div class="title-wrapper">
+                <!-- TODO -->
                 <a
                   href="#"
                   class="resume-btn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button class="form-btn" type="submit" data-form-btn disabled>
+                  <button class="form-btn" type="submit" data-form-btn>
                     <ion-icon name="cloud-download-outline"></ion-icon>
                     <span>Download Resume</span>
                   </button>
@@ -279,10 +292,10 @@
           </header>
 
           <section class="contact-form">
-            <h3 class="h3 form-title">Contact Form</h3>
-
+            <!-- TODO -->
             <form
-              action="https://formspree.io/f/manevkpa"
+              action="#"
+              id="contactForm"
               method="POST"
               class="form"
               data-form
@@ -333,6 +346,16 @@
                 <span>Send Message</span>
               </button>
             </form>
+
+            <div id="thankYouMessage">
+              <h3 class="h3 form-title">Thank You!</h3>
+              <section class="about-text">
+                <p>
+                  Your message has been sent successfully.I will get back to you
+                  soon.
+                </p>
+              </section>
+            </div>
           </section>
         </article>
       </div>
