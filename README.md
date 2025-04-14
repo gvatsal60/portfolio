@@ -11,7 +11,10 @@
 
 ## About
 
-This is a personal portfolio website showcasing skills, projects, and professional experience. The project is built using **HTML**, **CSS**, and **JavaScript**, and is deployed on **GitHub Pages**. It includes sections for About, Resume, and Contact, along with dynamic features like form handling and responsive design.
+This is a personal portfolio website showcasing skills, projects, and professional experience.
+The project is built using **HTML**, **CSS**, and **JavaScript**, and is deployed on **GitHub Pages**.
+It includes sections for About, Resume, and Contact, along with dynamic features like form handling
+and responsive design.
 
 ## Features
 
