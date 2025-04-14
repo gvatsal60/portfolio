@@ -1,6 +1,5 @@
-"use strict";
-
 document.addEventListener("DOMContentLoaded", () => {
+  "use strict";
   // element toggle function
   const elementToggleFunc = function(elem) { elem.classList.toggle("active"); };
 
