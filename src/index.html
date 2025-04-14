@@ -265,9 +265,8 @@
               </p>
 
               <div class="title-wrapper">
-                <!-- TODO -->
                 <a
-                  href="#"
+                  href="{{ site.resume_url | default: '#' }}"
                   class="resume-btn"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -292,9 +291,8 @@
           </header>
 
           <section class="contact-form">
-            <!-- TODO -->
             <form
-              action="#"
+              action="{{ site.contact_form_url | default: '#' }}"
               id="contactForm"
               method="POST"
               class="form"
