@@ -9,6 +9,18 @@
 ![GitHub forks](https://img.shields.io/github/forks/gvatsal60/portfolio)
 ![GitHub stars](https://img.shields.io/github/stars/gvatsal60/portfolio)
 
+## About
+
+This is a personal portfolio website showcasing skills, projects, and professional experience. The project is built using **HTML**, **CSS**, and **JavaScript**, and is deployed on **GitHub Pages**. It includes sections for About, Resume, and Contact, along with dynamic features like form handling and responsive design.
+
+## Features
+
+- **Responsive Design**: Optimized for various screen sizes and devices.
+- **Dynamic Contact Form**: Integrated with Formspree for handling form submissions.
+- **Customizable**: Easily update content and styles to match your personal branding.
+- **Pre-commit Hooks**: Ensures code quality with automated checks.
+- **GitHub Actions**: Automates deployment and CI/CD workflows.
+
 ## Contributing
 
 Contributions are welcome! Please read our
@@ -20,3 +32,8 @@ before submitting pull requests.
 This project is licensed under the Apache License 2.0 License -
 see the [LICENSE](https://github.com/gvatsal60/portfolio/blob/HEAD/LICENSE)
 file for details.
+
+## Acknowledgments
+
+* Design and layout inspired by [@codewithsadee](https://github.com/codewithsadee).
+* Icons provided by [Ionicons](https://ionicons.com/).
