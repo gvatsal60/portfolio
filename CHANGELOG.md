@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to [Project Name](https) will be documented in this file.
+All notable changes to [Portfolio](https://github.com/gvatsal60/portfolio) will be documented in this file.
 
 ## [Unreleased](#unreleased)
 
