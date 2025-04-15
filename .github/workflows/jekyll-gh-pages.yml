@@ -3,7 +3,6 @@ name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 on:
   # Build for all branches involved in PRs
   pull_request:
-    branches: ["*"]
   # Runs on pushes targeting the default branch
   push:
     branches: ["master"]
@@ -40,6 +39,10 @@ jobs:
         with:
           source: ./src
           destination: ./_site
+        run: |
+          ls
+          cat _/site/_config.yml
+          cat _site/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
   # Deployment job
