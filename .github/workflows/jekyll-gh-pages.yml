@@ -1,11 +1,10 @@
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
 name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 on:
-  # Build for all branches involved in PRs
   pull_request:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["master"]
+    branches: ["master", "main"]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
