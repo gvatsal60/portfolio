@@ -5,7 +5,8 @@ on:
   pull_request:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["master", "main"]
+    branches:
+      - ${{ github.event.repository.default_branch }}
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -27,11 +28,11 @@ jobs:
         uses: actions/checkout@v4
       - name: Inject URLs
         env:
-          CONTACT_FORM_URL: ${{ secrets.CONTACT_FORM_URL }}
           RESUME_URL: ${{ secrets.RESUME_URL }}
+          CONTACT_FORM_URL: ${{ secrets.CONTACT_FORM_URL }}
         run: |
-          echo "contact_form_url: $CONTACT_FORM_URL" > src/_config.yml
           echo "resume_url: $RESUME_URL" >> src/_config.yml
+          echo "contact_form_url: $CONTACT_FORM_URL" >> src/_config.yml
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
@@ -45,7 +46,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
   # Deployment job
   deploy:
-    if: github.ref == 'refs/heads/master' # Ensure deployment happens only on master
+    if: github.ref == 'refs/heads/${{ github.event.repository.default_branch }}' # Ensure deployment happens only on master
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
