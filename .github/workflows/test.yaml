@@ -3,7 +3,6 @@ name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 on:
   pull_request:
   # Runs on pushes targeting the default branch
-
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -39,4 +38,3 @@ jobs:
           ls
           cat _/site/_config.yml
           cat _site/index.html
-
