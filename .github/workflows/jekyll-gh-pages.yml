@@ -1,6 +1,9 @@
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
 name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 on:
+  # Build for all branches involved in PRs
+  pull_request:
+    branches: ["*"]
   # Runs on pushes targeting the default branch
   push:
     branches: ["master"]
@@ -41,6 +44,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
   # Deployment job
   deploy:
+    if: github.ref == 'refs/heads/master' # Ensure deployment happens only on master
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
