@@ -25,8 +25,8 @@ jobs:
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./src
-          destination: ./_site
+          source: src
+          destination: _site
       - name: Log the output
         run: |
           echo "Jekyll build completed successfully."
