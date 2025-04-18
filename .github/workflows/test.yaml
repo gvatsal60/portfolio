@@ -16,7 +16,7 @@ jobs:
           RESUME_URL: ${{ secrets.RESUME_URL }}
           CONTACT_FORM_URL: ${{ secrets.CONTACT_FORM_URL }}
         run: |
-          echo "resume_url: $RESUME_URL" >> _config.yml
+          echo "resume_url: $RESUME_URL" >> src/_config.yml
           echo "contact_form_url: $CONTACT_FORM_URL" >> _config.yml
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -25,8 +25,12 @@ jobs:
         with:
           source: ./src
           destination: ./_site
+          verbose: true
+
       - name: Inspect Output
         run: |
+          echo "Inspecting the output of the Jekyll build..."
+          cat src/_config.yml
           echo "Current directory:"
           ls
           echo "List of files in the _site directory:"
