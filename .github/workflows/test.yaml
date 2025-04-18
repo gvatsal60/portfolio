@@ -27,6 +27,9 @@ jobs:
           destination: ./_site
       - name: Inspect Output
         run: |
+          echo "Current directory:"
           ls
-          cat _site/_config.yml
+          echo "List of files in the _site directory:"
+          ls _site/
+          echo "Contents of the _site/index.html file:"
           cat _site/index.html
