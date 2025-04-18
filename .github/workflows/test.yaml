@@ -26,7 +26,6 @@ jobs:
           source: ./src
           destination: ./_site
           verbose: true
-
       - name: Inspect Output
         run: |
           echo "Inspecting the output of the Jekyll build..."
