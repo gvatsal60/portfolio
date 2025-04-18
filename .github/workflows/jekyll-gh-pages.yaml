@@ -25,8 +25,8 @@ jobs:
           RESUME_URL: ${{ secrets.RESUME_URL }}
           CONTACT_URL: ${{ secrets.CONTACT_URL }}
         run: |
-          echo "resume_url: $RESUME_URL" >> src/_config.yml
-          echo "contact_url: $CONTACT_URL" >> src/_config.yml
+          echo "resume_url: \"${RESUME_URL}\"" >> src/_config.yml
+          echo "contact_url: \"${CONTACT_URL}\"" >> src/_config.yml
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
