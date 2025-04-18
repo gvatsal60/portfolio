@@ -1,14 +1,9 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
 name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 on:
-  # Runs on pull requests targeting all the branches
   pull_request:
-  # Runs on pushes targeting the default branch
   push:
-    branches: ["master", "main"]
-  # Allows you to run this workflow manually from the Actions tab
+    branches: [$default-branch]
   workflow_dispatch:
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -27,11 +22,11 @@ jobs:
         uses: actions/checkout@v4
       - name: Inject URLs
         env:
-          CONTACT_FORM_URL: ${{ secrets.CONTACT_FORM_URL }}
           RESUME_URL: ${{ secrets.RESUME_URL }}
+          CONTACT_URL: ${{ secrets.CONTACT_URL }}
         run: |
-          echo "contact_form_url: $CONTACT_FORM_URL" > src/_config.yml
           echo "resume_url: $RESUME_URL" >> src/_config.yml
+          echo "contact_url: $CONTACT_URL" >> src/_config.yml
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
@@ -39,13 +34,11 @@ jobs:
         with:
           source: ./src
           destination: ./_site
-        run: |
-          echo "Build completed successfully."
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
   # Deployment job
   deploy:
-    if: github.ref == 'refs/heads/master' # Ensure deployment happens only on master
+    if: github.ref == github.event.repository.default_branch
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

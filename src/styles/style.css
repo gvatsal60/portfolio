@@ -1058,7 +1058,6 @@ textarea.form-input::-webkit-resizer {
   background: var(--bg-gradient-jet);
 }
 
-
 #thankYouMessage {
   display: none;
   margin-top: 20px;
