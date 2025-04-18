@@ -1,0 +1,45 @@
+name: Testing Jekyll Github Actions
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Inject URLs
+        env:
+          RESUME_URL: "https://example.com/resume"
+          CONTACT_URL: "https://example.com/contact"
+        run: |
+          echo "resume_url: $RESUME_URL" >> src/_config.yml
+          echo "contact_url: $CONTACT_URL" >> src/_config.yml
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./src
+          destination: ./_site
+      - name: Log the output
+        run: |
+          echo "Jekyll build completed successfully."
+          echo "*************************************************************************"
+          echo "Contents of _site directory:"
+          ls ${{ github.workspace }}/_site
+          echo "*************************************************************************"
+          echo "Contents of src directory:"
+          ls ${{ github.workspace }}/src
+          echo "*************************************************************************"
+          echo "Contents of _config.yml:"
+          cat ${{ github.workspace }}/src/_config.yml
+          echo "*************************************************************************"
+          echo "Contents of index.html after injection:"
+          cat ${{ github.workspace }}/_site/index.html
+          echo "*************************************************************************"
