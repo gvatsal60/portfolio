@@ -32,14 +32,14 @@ jobs:
           echo "Jekyll build completed successfully."
           echo "*************************************************************************"
           echo "Contents of _site directory:"
-          ls ${{ github.workspace }}/_site
+          ls ./_site
           echo "*************************************************************************"
           echo "Contents of src directory:"
-          ls ${{ github.workspace }}/src
+          ls ./src
           echo "*************************************************************************"
           echo "Contents of _config.yml:"
-          cat ${{ github.workspace }}/src/_config.yml
+          cat ./src/_config.yml
           echo "*************************************************************************"
           echo "Contents of index.html after injection:"
-          cat ${{ github.workspace }}/_site/index.html
+          cat ./_site/index.html
           echo "*************************************************************************"
