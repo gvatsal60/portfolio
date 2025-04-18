@@ -21,10 +21,9 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./src
-          destination: ./_site
+        # Outputs to the './_site' directory by default
+        run: bundle exec jekyll build --config ./src/_config.yml --baseurl "${{ steps.pages.outputs.base_path }}"
+
       - name: Inspect Output
         run: |
           echo "Current directory:"
@@ -33,3 +32,5 @@ jobs:
           ls _site/
           echo "Contents of the _site/index.html file:"
           cat _site/index.html
+          echo "Contents of the assets file:"
+          ls _site/assets/
