@@ -26,8 +26,8 @@ jobs:
           CONTACT_URL: ${{ secrets.CONTACT_URL }}
         run: |
           touch src/_config.yml
-          yq eval ".resume_url = env(RESUME_URL)" -i src/_config.yml
-          yq eval ".contact_url = env(CONTACT_URL)" -i src/_config.yml
+          yq eval ".resume_url = strenv(RESUME_URL)" -i src/_config.yml
+          yq eval ".contact_url = strenv(CONTACT_URL)" -i src/_config.yml
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
