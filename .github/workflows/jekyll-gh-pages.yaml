@@ -35,7 +35,6 @@ jobs:
           destination: _site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-
   # Deployment job for pull requests
   deploy_test:
     if: github.event_name == 'pull_request'
@@ -52,7 +51,6 @@ jobs:
         with:
           branch: preview-${{ github.event.pull_request.number }}
           token: ${{ secrets.GITHUB_TOKEN }}
-
   # Deployment job on master
   deploy:
     if: github.ref == 'refs/heads/${{ github.event.repository.default_branch }}'
