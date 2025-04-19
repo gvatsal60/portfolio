@@ -40,13 +40,15 @@ jobs:
     if: github.event_name == 'pull_request'
     environment:
       name: github-pages-preview
-      url: https://${{ github.repository_owner }}.github.io/preview-${{ github.event.pull_request.number }}
+      url: ${{ steps.deployment_test.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
       - name: Deploy to GitHub Pages (Preview)
         id: deployment_test
         uses: actions/deploy-pages@v4
+        with:
+          preview: true # Enable preview mode
   # Deployment job on master
   deploy:
     if: github.event_name == 'push' && github.ref_name == github.event.repository.default_branch
