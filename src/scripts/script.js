@@ -133,14 +133,12 @@ document.addEventListener("DOMContentLoaded", () => {
   if (formInputs) {
     formInputs.forEach((input) => {
       input.addEventListener("input", function() {
-        if (form && form.checkValidity()) {
+        if (form?.checkValidity()) {
           if (formBtn) {
             formBtn.removeAttribute("disabled");
           }
-        } else {
-          if (formBtn) {
-            formBtn.setAttribute("disabled", "");
-          }
+        } else if (formBtn) {
+          formBtn.setAttribute("disabled", "");
         }
       });
     });
