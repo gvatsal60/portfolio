@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   "use strict";
   // element toggle function
-  const elementToggleFunc = function(elem) { elem.classList.toggle("active"); };
+  const elementToggleFunc = function (elem) { elem.classList.toggle("active"); };
 
   // sidebar variables
   const sidebar = document.querySelector("[data-sidebar]");
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // sidebar toggle functionality for mobile
   if (sidebarBtn) {
-    sidebarBtn.addEventListener("click", function() {
+    sidebarBtn.addEventListener("click", function () {
       if (sidebar) {
         sidebar.classList.toggle("active");
       }
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalText = document.querySelector("[data-modal-text]");
 
   // modal toggle function
-  const testimonialsModalFunc = function() {
+  const testimonialsModalFunc = function () {
     if (modalContainer && overlay) {
       modalContainer.classList.toggle("active");
       overlay.classList.toggle("active");
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // add click event to all modal items
   if (testimonialsItem) {
     testimonialsItem.forEach((item) => {
-      item.addEventListener("click", function() {
+      item.addEventListener("click", function () {
         if (modalImg && modalTitle && modalText) {
           modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
           modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
@@ -69,13 +69,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
   if (select) {
-    select.addEventListener("click", function() { elementToggleFunc(this); });
+    select.addEventListener("click", function () { elementToggleFunc(this); });
   }
 
   // add event in all select items
   if (selectItems) {
     selectItems.forEach((item) => {
-      item.addEventListener("click", function() {
+      item.addEventListener("click", function () {
         let selectedValue = this.innerText.toLowerCase();
         if (selectValue) {
           selectValue.innerText = this.innerText;
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // filter variables
   const filterItems = document.querySelectorAll("[data-filter-item]");
 
-  const filterFunc = function(selectedValue) {
+  const filterFunc = function (selectedValue) {
     if (filterItems) {
       filterItems.forEach((item) => {
         if (selectedValue === "all") {
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (filterBtn) {
     filterBtn.forEach((btn) => {
-      btn.addEventListener("click", function() {
+      btn.addEventListener("click", function () {
         let selectedValue = this.innerText.toLowerCase();
         if (selectValue) {
           selectValue.innerText = this.innerText;
@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // add event to all form input field
   if (formInputs) {
     formInputs.forEach((input) => {
-      input.addEventListener("input", function() {
+      input.addEventListener("input", function () {
         if (form?.checkValidity()) {
           if (formBtn) {
             formBtn.removeAttribute("disabled");
@@ -191,10 +191,10 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       // Send the form data
       const response = await fetch(contactForm.action, {
-        method : "POST",
-        body : formData,
-        headers : {
-          Accept : "application/json",
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
         },
       });
 
