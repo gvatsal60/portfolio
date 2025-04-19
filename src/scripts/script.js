@@ -129,18 +129,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const formInputs = document.querySelectorAll("[data-form-input]");
   const formBtn = document.querySelector("[data-form-btn]");
 
-  // add event to all form input field
-  if (formInputs) {
-    formInputs.forEach((input) => {
-      input.addEventListener("input", function () {
-        if (form?.checkValidity()) {
-          if (formBtn) {
-            formBtn.removeAttribute("disabled");
-          }
-        } else if (formBtn) {
-          formBtn.setAttribute("disabled", "");
-        }
-      });
+  // Ensure the elements exist before proceeding
+  if (form && formInputs.length && formBtn) {
+    // Use event delegation to minimize event listeners
+    form.addEventListener("input", () => {
+      formBtn.disabled = !form.checkValidity();
     });
   }
 
