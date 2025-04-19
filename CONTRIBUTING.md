@@ -1,4 +1,4 @@
-# Contributing to [Portfolio] (#contributing-to-project-name)
+# Contributing to [Portfolio](https://github.com/gvatsal60/portfolio)
 
 Thank you for your interest in contributing to [Portfolio](https://github.com/gvatsal60/portfolio)!
 Please follow these guidelines to ensure a smooth process.
