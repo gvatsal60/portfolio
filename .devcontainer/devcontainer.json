@@ -14,6 +14,7 @@
         "foxundermoon.shell-format",
         "ms-vscode.live-server",
         "streetsidesoftware.code-spell-checker",
+        "stylelint.vscode-stylelint",
         "usernamehw.errorlens"
       ],
       "settings": {
