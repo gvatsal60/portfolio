@@ -3,6 +3,7 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://img.shields.io/github/license/gvatsal60/portfolio)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/gvatsal60/portfolio/master.svg)](https://results.pre-commit.ci/latest/github/gvatsal60/portfolio/HEAD)
 [![CodeFactor](https://www.codefactor.io/repository/github/gvatsal60/portfolio/badge)](https://www.codefactor.io/repository/github/gvatsal60/portfolio)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gvatsal60_portfolio2&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=gvatsal60_portfolio2)
 ![GitHub repo size](https://img.shields.io/github/repo-size/gvatsal60/portfolio)
 ![GitHub pull-requests](https://img.shields.io/github/issues-pr/gvatsal60/portfolio)
 ![GitHub Issues](https://img.shields.io/github/issues/gvatsal60/portfolio)
