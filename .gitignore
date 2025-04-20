@@ -107,6 +107,9 @@ coverage/
 # Next.js
 .next/
 
+# Elty
+.qlty/
+
 # Binaries, node_modules, and other folders #
 ############################################
 bin/
