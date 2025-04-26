@@ -20,51 +20,51 @@
 
   --bg-gradient-onyx: linear-gradient(
     to bottom right,
-    hsl(240 1% 25%) 3%,
-    hsl(0 0% 19%) 97%
+    hsl(240deg 1% 25%) 3%,
+    hsl(0deg 0% 19%) 97%
   );
   --bg-gradient-jet: linear-gradient(
       to bottom right,
-      hsl(240 1% 18% / 25.1%) 0%,
-      hsl(240 2% 11% / 0%) 100%
+      hsl(240deg 1% 18% / 25.1%) 0%,
+      hsl(240deg 2% 11% / 0%) 100%
     ),
-    hsl(240 2% 13%);
+    hsl(240deg 2% 13%);
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right,
-    hsl(45 100% 71%) 0%,
-    hsl(36 100% 69% / 0%) 50%
+    hsl(45deg 100% 71%) 0%,
+    hsl(36deg 100% 69% / 0%) 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
       135deg,
-      hsl(45 100% 71% / 25.1%) 0%,
-      hsl(35 100% 68% / 0%) 59.86%
+      hsl(45deg 100% 71% / 25.1%) 0%,
+      hsl(35deg 100% 68% / 0%) 59.86%
     ),
-    hsl(240 2% 13%);
+    hsl(240deg 2% 13%);
   --border-gradient-onyx: linear-gradient(
     to bottom right,
-    hsl(0 0% 25%) 0%,
-    hsl(0 0% 25% / 0%) 50%
+    hsl(0deg 0% 25%) 0%,
+    hsl(0deg 0% 25% / 0%) 50%
   );
   --text-gradient-yellow: linear-gradient(
     to right,
-    hsl(45 100% 72%),
-    hsl(35 100% 68%)
+    hsl(45deg 100% 72%),
+    hsl(35deg 100% 68%)
   );
 
   /* solid */
 
-  --jet: hsl(0 0% 22%);
-  --onyx: hsl(240 1% 17%);
-  --eerie-black-1: hsl(240 2% 13%);
-  --eerie-black-2: hsl(240 2% 12%);
-  --smoky-black: hsl(0 0% 7%);
-  --white-1: hsl(0 0% 100%);
-  --white-2: hsl(0 0% 98%);
-  --orange-yellow-crayola: hsl(45 100% 72%);
-  --vegas-gold: hsl(45 54% 58%);
-  --light-gray: hsl(0 0% 84%);
-  --light-gray-70: hsl(0 0% 84% / 70%);
-  --bittersweet-shimmer: hsl(0 43% 51%);
+  --jet: hsl(0deg 0% 22%);
+  --onyx: hsl(240deg 1% 17%);
+  --eerie-black-1: hsl(240deg 2% 13%);
+  --eerie-black-2: hsl(240deg 2% 12%);
+  --smoky-black: hsl(0deg 0% 7%);
+  --white-1: hsl(0deg 0% 100%);
+  --white-2: hsl(0deg 0% 98%);
+  --orange-yellow-crayola: hsl(45deg 100% 72%);
+  --vegas-gold: hsl(45deg 54% 58%);
+  --light-gray: hsl(0deg 0% 84%);
+  --light-gray-70: hsl(0deg 0% 84% / 70%);
+  --bittersweet-shimmer: hsl(0deg 43% 51%);
 
   /**
    * typography
@@ -93,11 +93,11 @@
    * shadow
    */
 
-  --shadow-1: -4px 8px 24px hsl(0 0% 0% / 25%);
-  --shadow-2: 0 16px 30px hsl(0 0% 0% / 25%);
-  --shadow-3: 0 16px 40px hsl(0 0% 0% / 25%);
-  --shadow-4: 0 25px 50px hsl(0 0% 0% / 15%);
-  --shadow-5: 0 24px 80px hsl(0 0% 0% / 25%);
+  --shadow-1: -4px 8px 24px hsl(0deg 0% 0% / 25%);
+  --shadow-2: 0 16px 30px hsl(0deg 0% 0% / 25%);
+  --shadow-3: 0 16px 40px hsl(0deg 0% 0% / 25%);
+  --shadow-4: 0 25px 50px hsl(0deg 0% 0% / 15%);
+  --shadow-5: 0 24px 80px hsl(0deg 0% 0% / 25%);
 
   /**
    * transition
@@ -483,7 +483,7 @@ main {
 
 .navbar {
   backdrop-filter: blur(10px);
-  background: hsl(240 1% 17% / 75%);
+  background: hsl(240deg 1% 17% / 75%);
   border: 1px solid var(--jet);
   border-radius: 12px 12px 0 0;
   bottom: 0;
@@ -683,7 +683,7 @@ main {
 }
 
 .overlay {
-  background: hsl(0 0% 5%);
+  background: hsl(0deg 0% 5%);
   height: 100vh;
   left: 0;
   opacity: 0;
@@ -1469,9 +1469,9 @@ textarea.form-input::-webkit-resizer {
     * shadow
     */
 
-    --shadow-1: -4px 8px 24px hsl(0 0% 0% / 12.5%);
-    --shadow-2: 0 16px 30px hsl(0 0% 0% / 12.5%);
-    --shadow-3: 0 16px 40px hsl(0 0% 0% / 12.5%);
+    --shadow-1: -4px 8px 24px hsl(0deg 0% 0% / 12.5%);
+    --shadow-2: 0 16px 30px hsl(0deg 0% 0% / 12.5%);
+    --shadow-3: 0 16px 40px hsl(0deg 0% 0% / 12.5%);
   }
 
   /**
@@ -1504,8 +1504,8 @@ textarea.form-input::-webkit-resizer {
 
   .navbar {
     border-radius: 0 20px;
-    inset: 0 0 auto auto;
     box-shadow: none;
+    inset: 0 0 auto auto;
     padding: 0 20px;
     position: absolute;
     width: max-content;
@@ -1562,15 +1562,15 @@ textarea.form-input::-webkit-resizer {
   }
 
   body::-webkit-scrollbar-thumb {
-    background: hsl(0 0% 100% / 10%);
+    background: hsl(0deg 0% 100% / 10%);
     border: 5px solid var(--smoky-black);
     border-radius: 20px;
-    box-shadow: inset 1px 1px 0 hsl(0 0% 100% / 11%),
-      inset -1px -1px 0 hsl(0 0% 100% / 11%);
+    box-shadow: inset 1px 1px 0 hsl(0deg 0% 100% / 11%),
+      inset -1px -1px 0 hsl(0deg 0% 100% / 11%);
   }
 
   body::-webkit-scrollbar-thumb:hover {
-    background: hsl(0 0% 100% / 15%);
+    background: hsl(0deg 0% 100% / 15%);
   }
 
   body::-webkit-scrollbar-button {
