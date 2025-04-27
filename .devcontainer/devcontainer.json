@@ -8,7 +8,6 @@
         "DavidAnson.vscode-markdownlint",
         "Gruntfuggly.todo-tree",
         "PKief.material-icon-theme",
-        "SonarSource.sonarlint-vscode",
         "Tyriar.sort-lines",
         "bradzacher.vscode-copy-filename",
         "foxundermoon.shell-format",
@@ -80,7 +79,10 @@
       }
     }
   },
-  "image": "mcr.microsoft.com/devcontainers/javascript-node",
+  "features": {
+    "ghcr.io/gvatsal60/dev-container-features/sonarlint": {}
+  },
+  "image": "mcr.microsoft.com/devcontainers/jekyll",
   "mounts": [
     "source=${localWorkspaceFolder}/snippets,target=${containerWorkspaceFolder}/.vscode,type=bind,consistency=cached"
   ],
