@@ -39,5 +39,5 @@ file for details.
 
 ## Acknowledgments
 
-- Design and layout inspired by [@codewithsadee](https://github.com/codewithsadee).
+- Design and layout inspired by [@codewithsadee](https://github.com/codewithsadee/vcard-personal-portfolio).
 - Icons provided by [Ionicons](https://ionicons.com/).
