@@ -23,7 +23,7 @@ jobs:
           CONTACT_URL: ${{ secrets.CONTACT_URL }}
         run: |
           touch src/_config.yml
-          yq eval ".baseurl= strenv(BASE_URL)" -i src/_config.yml
+          yq eval ".baseurl = strenv(BASE_URL)" -i src/_config.yml
           yq eval ".resume_url = strenv(RESUME_URL)" -i src/_config.yml
           yq eval ".contact_url = strenv(CONTACT_URL)" -i src/_config.yml
       - name: Setup Pages
