@@ -25,7 +25,7 @@ jobs:
             ${{ runner.os }}-gems-
       - name: Inject URLs
         env:
-          BASE_URL: ""
+          BASE_URL: "/preview"
           RESUME_URL: ${{ secrets.RESUME_URL }}
           CONTACT_URL: ${{ secrets.CONTACT_URL }}
         run: |
