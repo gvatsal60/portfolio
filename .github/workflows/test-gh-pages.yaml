@@ -16,13 +16,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Cache Gems
-        uses: actions/cache@v3
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
       - name: Inject URLs
         env:
           BASE_URL: "/preview"
@@ -30,7 +23,7 @@ jobs:
           CONTACT_URL: ${{ secrets.CONTACT_URL }}
         run: |
           touch src/_config.yml
-          yq eval ".baseurl = strenv(BASE_URL)" -i src/_config.yml
+          yq eval ".baseurl= strenv(BASE_URL)" -i src/_config.yml
           yq eval ".resume_url = strenv(RESUME_URL)" -i src/_config.yml
           yq eval ".contact_url = strenv(CONTACT_URL)" -i src/_config.yml
       - name: Setup Pages
