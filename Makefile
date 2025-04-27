@@ -15,6 +15,8 @@
 SRC_PATH := ./src
 DEST_PATH := ./_site
 
+# Bundle install command
+BUNDLE_INSTALL := bundle install
 # Jekyll build command
 JEKYLL_BUILD := bundle exec jekyll build --incremental --source $(SRC_PATH) --destination $(DEST_PATH)
 # Jekyll serve command
@@ -25,7 +27,7 @@ all: serve
 
 install:
 	@echo "Installing dependencies..."
-	@bundle install
+	@$(BUNDLE_INSTALL)
 	@echo "Dependencies installed."
 
 build: install
