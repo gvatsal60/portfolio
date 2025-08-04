@@ -47,7 +47,7 @@ repos:
       - id: eslint
   # Runs mypy to check Python type annotations.
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: "v1.17.0"
+    rev: "v1.17.1"
     hooks:
       - id: mypy
   # Lints SCSS files to enforce style and best practices.
