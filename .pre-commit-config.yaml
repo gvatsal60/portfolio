@@ -6,7 +6,7 @@ repos:
       - id: sync-pre-commit-deps
   # Pre-commit hooks for general file checks
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: "v5.0.0"
+    rev: "v6.0.0"
     hooks:
       - id: check-added-large-files
       - id: check-ast
@@ -42,7 +42,7 @@ repos:
       - id: python-use-type-annotations
   # ESLint for linting JavaScript and TypeScript files
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: "v9.32.0"
+    rev: "v9.33.0"
     hooks:
       - id: eslint
   # Runs mypy to check Python type annotations.
@@ -72,7 +72,7 @@ repos:
       - id: csslint
   # ShellCheck hook for linting shell scripts
   - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: "v0.10.0.1"
+    rev: "v0.11.0.1"
     hooks:
       - id: shellcheck
         name: shellcheck
