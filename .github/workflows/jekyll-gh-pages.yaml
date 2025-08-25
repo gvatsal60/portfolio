@@ -33,7 +33,7 @@ jobs:
           source: src
           destination: _site
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
   # Deployment job on master
   deploy:
     if: github.ref_name == github.event.repository.default_branch
