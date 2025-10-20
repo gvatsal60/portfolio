@@ -42,7 +42,7 @@ repos:
       - id: python-use-type-annotations
   # ESLint for linting JavaScript and TypeScript files
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: "v9.37.0"
+    rev: "v9.38.0"
     hooks:
       - id: eslint
   # Runs mypy to check Python type annotations.
@@ -94,7 +94,7 @@ repos:
       - id: actionlint
   # Yamlfmt for formatting YAML files
   - repo: https://github.com/google/yamlfmt
-    rev: "v0.17.2"
+    rev: "v0.19.0"
     hooks:
       - id: yamlfmt
   # Codespell for detecting common misspellings in code
