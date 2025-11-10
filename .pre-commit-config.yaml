@@ -42,7 +42,7 @@ repos:
       - id: python-use-type-annotations
   # ESLint for linting JavaScript and TypeScript files
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: "v9.39.0"
+    rev: "v9.39.1"
     hooks:
       - id: eslint
   # Runs mypy to check Python type annotations.
@@ -109,7 +109,7 @@ repos:
       - id: checkmake
   # Gitleaks for detecting secrets in Git repositories
   - repo: https://github.com/gitleaks/gitleaks
-    rev: "v8.28.0"
+    rev: "v8.29.0"
     hooks:
       - id: gitleaks
   # Talisman for pre-commit Git hooks to detect sensitive files
