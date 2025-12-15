@@ -42,12 +42,12 @@ repos:
       - id: python-use-type-annotations
   # ESLint for linting JavaScript and TypeScript files
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: "v10.0.0-alpha.1"
+    rev: "v10.0.0-beta.0"
     hooks:
       - id: eslint
   # Runs mypy to check Python type annotations.
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: "v1.19.0"
+    rev: "v1.19.1"
     hooks:
       - id: mypy
   # Lints SCSS files to enforce style and best practices.
