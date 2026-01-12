@@ -42,7 +42,7 @@ repos:
       - id: python-use-type-annotations
   # ESLint for linting JavaScript and TypeScript files
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: "v10.0.0-beta.0"
+    rev: "v10.0.0-rc.0"
     hooks:
       - id: eslint
   # Runs mypy to check Python type annotations.
@@ -104,7 +104,7 @@ repos:
       - id: codespell
   # Checkmake for linting Makefiles
   - repo: https://github.com/mrtazz/checkmake
-    rev: "0.2.2"
+    rev: "v0.3.0"
     hooks:
       - id: checkmake
   # Gitleaks for detecting secrets in Git repositories
