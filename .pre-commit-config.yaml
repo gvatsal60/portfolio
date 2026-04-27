@@ -47,7 +47,7 @@ repos:
       - id: eslint
   # Runs mypy to check Python type annotations.
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: "v1.20.1"
+    rev: "v1.20.2"
     hooks:
       - id: mypy
   # Lints SCSS files to enforce style and best practices.
@@ -120,7 +120,7 @@ repos:
         entry: cmd --githook pre-commit
   # Markdownlint for linting Markdown files
   - repo: https://github.com/DavidAnson/markdownlint-cli2
-    rev: "v0.22.0"
+    rev: "v0.22.1"
     hooks:
       - id: markdownlint-cli2
         args: [--fix]
