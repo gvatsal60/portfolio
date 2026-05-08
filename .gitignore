@@ -108,6 +108,13 @@ coverage/
 # Next.js
 .next/
 
+# Elty
+.qlty/
+
+# Jeykll
+_site/
+**/.jekyll-metadata
+
 # Binaries, node_modules, and other folders #
 ############################################
 bin/
