@@ -1073,7 +1073,7 @@ textarea.form-input::-webkit-resizer {
  * responsive larger than 450px screen
  */
 
-@media (width >= 450px) {
+@media (min-width: 450px) {
   /**
    * client
    */
@@ -1087,7 +1087,7 @@ textarea.form-input::-webkit-resizer {
  * responsive larger than 580px screen
  */
 
-@media (width >= 580px) {
+@media (min-width: 580px) {
   /**
    * CUSTOM PROPERTY
    */
@@ -1396,7 +1396,7 @@ textarea.form-input::-webkit-resizer {
  * responsive larger than 768px screen
  */
 
-@media (width >= 768px) {
+@media (min-width: 768px) {
   /**
    * REUSED STYLE
    */
@@ -1460,7 +1460,7 @@ textarea.form-input::-webkit-resizer {
  * responsive larger than 1024px screen
  */
 
-@media (width >= 1024px) {
+@media (min-width: 1024px) {
   /**
    * CUSTOM PROPERTY
    */
@@ -1549,7 +1549,7 @@ textarea.form-input::-webkit-resizer {
  * responsive larger than 1250px screen
  */
 
-@media (width >= 1250px) {
+@media (min-width: 1250px) {
   /**
    * RESET
    */
