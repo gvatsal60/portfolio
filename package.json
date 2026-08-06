@@ -1,14 +1,5 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
   "description": "Portfolio site tests",
-  "scripts": {
-    "test": "jest --verbose",
-    "test:unit": "jest tests/unit --verbose",
-    "test:functional": "jest tests/functional --verbose",
-    "test:automation": "npx playwright test",
-    "test:all": "npm run test:unit && npm run test:functional && npm run test:automation"
-  },
   "devDependencies": {
     "@playwright/test": "^1.62.1",
     "jest": "^30.4.2",
@@ -16,16 +7,25 @@
     "playwright-core": "^1.62.1"
   },
   "jest": {
-    "testEnvironment": "jsdom",
-    "roots": [
-      "<rootDir>/tests"
-    ],
-    "testMatch": [
-      "**/*.test.js"
-    ],
     "collectCoverageFrom": [
       "src/scripts/**/*.js"
     ],
-    "coverageDirectory": "coverage"
-  }
+    "coverageDirectory": "coverage",
+    "roots": [
+      "<rootDir>/tests"
+    ],
+    "testEnvironment": "jsdom",
+    "testMatch": [
+      "**/*.test.js"
+    ]
+  },
+  "name": "portfolio",
+  "scripts": {
+    "test": "jest --verbose",
+    "test:all": "npm run test:unit && npm run test:functional && npm run test:automation",
+    "test:automation": "npx playwright test",
+    "test:functional": "jest tests/functional --verbose",
+    "test:unit": "jest tests/unit --verbose"
+  },
+  "version": "1.0.0"
 }
