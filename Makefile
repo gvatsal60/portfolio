@@ -1,4 +1,4 @@
-.PHONY: all test clean
+.PHONY: all test test-unit test-functional test-automation test-all clean install build serve
 
 # Makefile for Jekyll site
 # This Makefile is used to build and serve a Jekyll site.
@@ -28,6 +28,7 @@ all: serve
 install:
 	@echo "Installing dependencies..."
 	@$(BUNDLE_INSTALL)
+	@npm install
 	@echo "Dependencies installed."
 
 build: install
@@ -40,9 +41,28 @@ serve: install
 	@$(JEKYLL_SERVE)
 
 test: install
-	@echo "Running tests..."
-	@echo "No tests implemented yet."
-	@echo "Tests complete."
+	@echo "Running all tests..."
+	@echo "=== Unit Tests ==="
+	@npx jest tests/unit --verbose 2>&1 || true
+	@echo "=== Functional Tests ==="
+	@npx jest tests/functional --verbose 2>&1 || true
+	@echo "=== Automation Tests ==="
+	@npx playwright test 2>&1 || true
+	@echo "All tests complete."
+
+test-unit: install
+	@echo "=== Running Unit Tests ==="
+	@npx jest tests/unit --verbose
+
+test-functional: install
+	@echo "=== Running Functional Tests ==="
+	@npx jest tests/functional --verbose
+
+test-automation: install
+	@echo "=== Running Automation Tests ==="
+	@npx playwright test
+
+test-all: test-unit test-functional test-automation
 
 clean:
 	@echo "Cleaning up..."

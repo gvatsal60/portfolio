@@ -1,0 +1,31 @@
+{
+  "description": "Portfolio site tests",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "jest": "^30.4.2",
+    "jest-environment-jsdom": "^30.4.1",
+    "playwright-core": "^1.62.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/scripts/**/*.js"
+    ],
+    "coverageDirectory": "coverage",
+    "roots": [
+      "<rootDir>/tests"
+    ],
+    "testEnvironment": "jsdom",
+    "testMatch": [
+      "**/*.test.js"
+    ]
+  },
+  "name": "portfolio",
+  "scripts": {
+    "test": "jest --verbose",
+    "test:all": "npm run test:unit && npm run test:functional && npm run test:automation",
+    "test:automation": "npx playwright test",
+    "test:functional": "jest tests/functional --verbose",
+    "test:unit": "jest tests/unit --verbose"
+  },
+  "version": "1.0.0"
+}
