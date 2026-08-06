@@ -80,6 +80,5 @@
   "runArgs": [
     "--rm",
     "--name=vsc-${localEnv:USER}-${containerWorkspaceFolderBasename}-${devcontainerId}"
-  ],
-  "updateRemoteUserUID": false
+  ]
 }
