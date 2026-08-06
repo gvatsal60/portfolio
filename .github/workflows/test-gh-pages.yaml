@@ -33,7 +33,11 @@ jobs:
         with:
           source: src
           destination: _site
-      - name: Setup
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: Setup Node.js
         uses: actions/setup-node@v7
       - name: Run Test Suite
         run: |
