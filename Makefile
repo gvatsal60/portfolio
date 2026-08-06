@@ -28,6 +28,7 @@ all: serve
 install:
 	@echo "Installing dependencies..."
 	@$(BUNDLE_INSTALL)
+	@npm install
 	@echo "Dependencies installed."
 
 build: install
