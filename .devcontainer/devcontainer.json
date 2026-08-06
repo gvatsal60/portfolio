@@ -75,16 +75,11 @@
       }
     }
   },
-  "features": {
-    "ghcr.io/gvatsal60/dev-container-features/sonarlint": {}
-  },
-  "image": "mcr.microsoft.com/devcontainers/jekyll",
-  "mounts": [
-    "source=${localWorkspaceFolder}/snippets,target=${containerWorkspaceFolder}/.vscode,type=bind,consistency=cached"
-  ],
+  "image": "mcr.microsoft.com/devcontainers/jekyll:latest",
   "postCreateCommand": "chmod +x ${containerWorkspaceFolder}/.devcontainer/postCreateScript.sh && ${containerWorkspaceFolder}/.devcontainer/postCreateScript.sh",
   "runArgs": [
     "--rm",
     "--name=vsc-${localEnv:USER}-${containerWorkspaceFolderBasename}-${devcontainerId}"
-  ]
+  ],
+  "updateRemoteUserUID": false
 }
