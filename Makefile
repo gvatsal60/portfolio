@@ -1,4 +1,11 @@
-.PHONY: all test clean
+# Default target
+.DEFAULT_GOAL := help
+
+help: ## Show this help message
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-15s\033[0m %s\n", $$1, $$2}'
+
+
+.PHONY: all help test clean
 
 # Makefile for Jekyll site
 # This Makefile is used to build and serve a Jekyll site.
@@ -23,28 +30,28 @@ JEKYLL_BUILD := bundle exec jekyll build --incremental --source $(SRC_PATH) --de
 JEKYLL_SERVE := bundle exec jekyll serve --incremental --source $(SRC_PATH) --destination $(DEST_PATH)
 
 # Default target to build and serve the site
-all: serve
+all: serve ## Build and serve the Jekyll site
 
-install:
+install: ## Install dependencies
 	@echo "Installing dependencies..."
 	@$(BUNDLE_INSTALL)
 	@echo "Dependencies installed."
 
-build: install
+build: install ## Build the Jekyll site
 	@echo "Building Jekyll site..."
 	@$(JEKYLL_BUILD)
 	@echo "Build complete."
 
-serve: install
+serve: install ## Serve the Jekyll site with live-reload
 	@echo "Serving Jekyll site..."
 	@$(JEKYLL_SERVE)
 
-test: install
+test: install ## Run tests
 	@echo "Running tests..."
 	@echo "No tests implemented yet."
 	@echo "Tests complete."
 
-clean:
+clean: ## Clean up generated files
 	@echo "Cleaning up..."
 	@rm -rf _site
 	@rm -rf .jekyll-cache
