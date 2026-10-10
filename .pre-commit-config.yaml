@@ -51,9 +51,14 @@ repos:
     rev: "v1.10.0"
     hooks:
       - id: python-use-type-annotations
+  # ESLint for linting JavaScript and TypeScript files
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: "v10.12.0"
+    hooks:
+      - id: eslint
   # Runs mypy to check Python type annotations.
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: "v2.3.1"
+    rev: "v2.4.0"
     hooks:
       - id: mypy
   # Pyupgrade for modernizing Python syntax
