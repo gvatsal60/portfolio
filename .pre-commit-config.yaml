@@ -53,7 +53,7 @@ repos:
       - id: python-use-type-annotations
   # ESLint for linting JavaScript and TypeScript files
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: "v10.12.0"
+    rev: "v10.13.0"
     hooks:
       - id: eslint
   # Runs mypy to check Python type annotations.
@@ -126,7 +126,7 @@ repos:
         args: ['-i', '4']
   # ShellCheck hook for linting shell scripts
   - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: "v0.11.0.1"
+    rev: "v0.11.0.1-1"
     hooks:
       - id: shellcheck
         name: shellcheck
@@ -158,7 +158,7 @@ repos:
       - id: codespell
   # Checkmake for linting Makefiles
   - repo: https://github.com/mrtazz/checkmake
-    rev: "v0.3.2"
+    rev: "v0.3.0"
     hooks:
       - id: checkmake
   # SQLFluff for linting and fixing SQL files
@@ -180,7 +180,7 @@ repos:
       - id: tf-validate
   # Gitleaks for detecting secrets in Git repositories
   - repo: https://github.com/gitleaks/gitleaks
-    rev: "v8.30.1"
+    rev: "v8.30.0"
     hooks:
       - id: gitleaks
   # Talisman for pre-commit Git hooks to detect sensitive files
