@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // sidebar toggle functionality for mobile
   if (sidebarBtn) {
-    sidebarBtn.addEventListener("click", function () {
+    sidebarBtn.addEventListener("click", function() {
       if (sidebar) {
         sidebar.classList.toggle("active");
       }
@@ -22,9 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Ensure the elements exist before proceeding
   if (form && formInputs.length && formBtn) {
     // Use event delegation to minimize event listeners
-    form.addEventListener("input", () => {
-      formBtn.disabled = !form.checkValidity();
-    });
+    form.addEventListener("input",
+                          () => { formBtn.disabled = !form.checkValidity(); });
   }
 
   // Select navigation links and pages
@@ -74,10 +73,10 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       // Send the form data
       const response = await fetch(contactForm.action, {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
+        method : "POST",
+        body : formData,
+        headers : {
+          Accept : "application/json",
         },
       });
 
